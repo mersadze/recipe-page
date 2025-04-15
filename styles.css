@@ -52,7 +52,7 @@ body {
 }
 
 .container img {
-    height: 300px;
+    width: 100%;
     border-radius: 15px;
     display: block;
     align-self: center;
