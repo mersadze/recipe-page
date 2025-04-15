@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+  
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+  
+    --brown-800: hsl(14, 45%, 36%);
+  
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    --fs-paragraph: 16px;
+
+    --fw-medium: 400;
+    --fw-bold: 600;
+    --fw-bolder: 700;
+    
+    --ff: "Young Serif", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    transition: all ease-in-out 0.3s;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-color: var(--stone-100);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: var(--white);
+    max-width: 46vw;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    gap: 1.6rem;
+}
+
+.container img {
+    height: 300px;
+    border-radius: 15px;
+    display: block;
+    align-self: center;
+    cursor: pointer;
+    margin-top: 0.4rem;
+}
+
+.container img:hover {
+    filter: brightness(0.8);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem;
+    margin-left: 0.2rem;
+    gap: 1rem;
+}
+
+.header h1 {
+    color: var(--stone-900);
+    font-size: 2.4rem;
+    font-family: var(--ff);
+    font-weight: var(--fw-medium);
+}
+
+.header p {
+    color: var(--stone-600);
+    font-size: var(--fs-paragraph);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem;
+    margin-left: 0.4rem;
+    gap: 1rem;
+    background-color: var(--rose-50);
+    border-radius: 10px;
+    width: 96%;
+}
+
+.info span {
+    color: var(--rose-800);
+    font-weight: var(--fw-bold);
+    font-size: 1.4rem;
+}
+
+.info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0.4rem;
+    margin-left: 1.8rem;
+}
+
+.info ul li::marker {
+    color: var(--rose-800);
+    font-size: 0.8rem;
+}
+
+.info ul li {
+    color: var(--stone-600);
+    padding: 0 1rem;
+}
+
+.box {
+    padding: 0.4rem;
+    margin-left: 0.4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--stone-150);
+    width: 96%;
+}
+
+.box:last-child {
+    border-bottom: 0;
+}
+
+.box h1 {
+    color: var(--brown-800);
+    font-weight: var(--fw-medium);
+    font-family: var(--ff);
+}
+
+.box ul {
+    margin-left: 1.2rem;
+    margin-top: 1rem;
+    font-size: 18px;
+}
+
+.box ul li::marker {
+    color: var(--brown-800);
+    font-size: 0.8rem;
+}
+
+#ingredients ul li {
+    color: var(--stone-600);
+    padding: 0.4rem 1rem;
+}
+
+#instructions ul li {
+    color: var(--stone-600);
+    padding: 0.4rem 1rem;
+}
+
+#nutrition p {
+    color: var(--stone-600);
+    margin-top: 1rem;
+}
+
+#nutrition table {
+    border-collapse: collapse;
+    padding: 1rem 2rem;
+    width: 96%;
+    margin: 0.2rem;
+    margin-top: 1.2rem;
+}
+
+#nutrition table tr {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+#nutrition table td {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.4rem;
+    color: var(--stone-600);
+}
+
+#nutrition table tr td:nth-child(2) {
+    color: var(--brown-800);
+    font-weight: var(--fw-bolder);
+}
+
+@media (max-width: 375px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100vw;
+    }
+
+    .container img {
+        margin: 0;
+        height: 200px;
+    }
+
+    .header {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+    
+    .info {
+        margin: 0;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        border-radius: 0;
+    }
+
+    .box {
+        padding: 1.6rem;
+        width: 100%;
+        margin: 0;
+    }
+
+}
